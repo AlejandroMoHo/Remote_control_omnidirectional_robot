@@ -1,0 +1,32 @@
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.exe.config
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.exe
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.AssemblyReference.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.Form1.resources
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.Properties.Resources.resources
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.GenerateResource.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.CoreCompileInputs.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.exe
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.AssemblyReference.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.Form1.resources
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.Properties.Resources.resources
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.GenerateResource.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.CoreCompileInputs.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.exe
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.exe.config
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.exe
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.DirectInput.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.DirectInput.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.DirectInput.xml
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.CopyComplete
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AForge.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AForge.Video.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AForge.xml
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\AForge.Video.xml
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\App API\AppControlRobot\AppControlRobot\bin\Debug\Newtonsoft.Json.xml
