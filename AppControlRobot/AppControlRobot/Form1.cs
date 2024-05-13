@@ -37,6 +37,8 @@ namespace AppControlRobot
 
         private int botones_motor = 10;
         private int index_camera_option = 0;
+        private int min_value_battery = 6264;
+        private int max_value_battery = 8330;
 
         MJPEGStream streamCamera;
 
@@ -109,7 +111,7 @@ namespace AppControlRobot
             controllerTimer.Tick += ControllerTimer_Tick;
 
             sensorsTimer = new Timer();
-            sensorsTimer.Interval = 10000;
+            sensorsTimer.Interval = 1000;
             sensorsTimer.Tick += SensorsTimer_Tick;
             sensorsTimer.Start();
 
@@ -276,7 +278,8 @@ namespace AppControlRobot
                 foreach (var battery in battery_values)
                 {
                     //MessageBox.Show($"ID: {battery.Id}, Type_sensor: {battery.Type_Sensor}, Type_Value: {battery.Type_Value} ,  Value: {battery.Value}");
-                    label_battery.Text = "Batería: " + battery.Value;
+                    float battery_percentage = 100 * (battery.Value - min_value_battery) / (max_value_battery - min_value_battery);
+                    label_battery.Text = "Batería: " + Convert.ToString(battery_percentage) + "%";
                 }
             }
             catch (HttpRequestException error)
