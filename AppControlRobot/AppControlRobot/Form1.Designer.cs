@@ -1,7 +1,7 @@
 ﻿
 namespace AppControlRobot
 {
-    partial class Form1
+    partial class MainApp
     {
 
 
@@ -15,21 +15,21 @@ namespace AppControlRobot
         {
             this.label_titulo_motores = new System.Windows.Forms.Label();
             this.label_titulo_servos = new System.Windows.Forms.Label();
-            this.Btn_arriba_motores = new System.Windows.Forms.Button();
-            this.Btn_izquierda_motores = new System.Windows.Forms.Button();
-            this.Btn_derecha_motores = new System.Windows.Forms.Button();
+            this.Btn_up_motors = new System.Windows.Forms.Button();
+            this.Btn_left_motors = new System.Windows.Forms.Button();
+            this.Btn_right_motors = new System.Windows.Forms.Button();
             this.Btn_abajo_motores = new System.Windows.Forms.Button();
             this.Btn_arriba_servos = new System.Windows.Forms.Button();
-            this.Btn_izquierda_servos = new System.Windows.Forms.Button();
-            this.Btn_derecha_servos = new System.Windows.Forms.Button();
-            this.Btn_abajo_servos = new System.Windows.Forms.Button();
-            this.DiagonalSI = new System.Windows.Forms.Button();
-            this.DiagonalSD = new System.Windows.Forms.Button();
-            this.DiagonalII = new System.Windows.Forms.Button();
-            this.DiagonalID = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.RotacionD = new System.Windows.Forms.Button();
-            this.Restablecer = new System.Windows.Forms.Button();
+            this.Btn_left_servos = new System.Windows.Forms.Button();
+            this.Btn_right_servos = new System.Windows.Forms.Button();
+            this.Btn_down_servos = new System.Windows.Forms.Button();
+            this.DiagonalUL = new System.Windows.Forms.Button();
+            this.DiagonalUR = new System.Windows.Forms.Button();
+            this.DiagonalBL = new System.Windows.Forms.Button();
+            this.DiagonalBR = new System.Windows.Forms.Button();
+            this.RotationL = new System.Windows.Forms.Button();
+            this.RotationR = new System.Windows.Forms.Button();
+            this.Reset_servos = new System.Windows.Forms.Button();
             this.camara = new System.Windows.Forms.PictureBox();
             this.btn_raw = new System.Windows.Forms.Button();
             this.btn_red = new System.Windows.Forms.Button();
@@ -62,41 +62,41 @@ namespace AppControlRobot
             this.label_titulo_servos.TabIndex = 8;
             this.label_titulo_servos.Text = "Servos";
             // 
-            // Btn_arriba_motores
+            // Btn_up_motors
             // 
-            this.Btn_arriba_motores.Location = new System.Drawing.Point(106, 175);
-            this.Btn_arriba_motores.Name = "Btn_arriba_motores";
-            this.Btn_arriba_motores.Size = new System.Drawing.Size(75, 75);
-            this.Btn_arriba_motores.TabIndex = 10;
-            this.Btn_arriba_motores.Tag = "0";
-            this.Btn_arriba_motores.Text = "Arriba";
-            this.Btn_arriba_motores.UseVisualStyleBackColor = true;
-            this.Btn_arriba_motores.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Btn_arriba_motores.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Btn_up_motors.Location = new System.Drawing.Point(106, 175);
+            this.Btn_up_motors.Name = "Btn_up_motors";
+            this.Btn_up_motors.Size = new System.Drawing.Size(75, 75);
+            this.Btn_up_motors.TabIndex = 10;
+            this.Btn_up_motors.Tag = "0";
+            this.Btn_up_motors.Text = "Arriba";
+            this.Btn_up_motors.UseVisualStyleBackColor = true;
+            this.Btn_up_motors.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_up_motors.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // Btn_izquierda_motores
+            // Btn_left_motors
             // 
-            this.Btn_izquierda_motores.Location = new System.Drawing.Point(25, 256);
-            this.Btn_izquierda_motores.Name = "Btn_izquierda_motores";
-            this.Btn_izquierda_motores.Size = new System.Drawing.Size(75, 75);
-            this.Btn_izquierda_motores.TabIndex = 11;
-            this.Btn_izquierda_motores.Tag = "1";
-            this.Btn_izquierda_motores.Text = "Izquierda";
-            this.Btn_izquierda_motores.UseVisualStyleBackColor = true;
-            this.Btn_izquierda_motores.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Btn_izquierda_motores.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Btn_left_motors.Location = new System.Drawing.Point(25, 256);
+            this.Btn_left_motors.Name = "Btn_left_motors";
+            this.Btn_left_motors.Size = new System.Drawing.Size(75, 75);
+            this.Btn_left_motors.TabIndex = 11;
+            this.Btn_left_motors.Tag = "1";
+            this.Btn_left_motors.Text = "Izquierda";
+            this.Btn_left_motors.UseVisualStyleBackColor = true;
+            this.Btn_left_motors.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_left_motors.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // Btn_derecha_motores
+            // Btn_right_motors
             // 
-            this.Btn_derecha_motores.Location = new System.Drawing.Point(187, 256);
-            this.Btn_derecha_motores.Name = "Btn_derecha_motores";
-            this.Btn_derecha_motores.Size = new System.Drawing.Size(75, 75);
-            this.Btn_derecha_motores.TabIndex = 12;
-            this.Btn_derecha_motores.Tag = "2";
-            this.Btn_derecha_motores.Text = "Derecha";
-            this.Btn_derecha_motores.UseVisualStyleBackColor = true;
-            this.Btn_derecha_motores.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Btn_derecha_motores.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Btn_right_motors.Location = new System.Drawing.Point(187, 256);
+            this.Btn_right_motors.Name = "Btn_right_motors";
+            this.Btn_right_motors.Size = new System.Drawing.Size(75, 75);
+            this.Btn_right_motors.TabIndex = 12;
+            this.Btn_right_motors.Tag = "2";
+            this.Btn_right_motors.Text = "Derecha";
+            this.Btn_right_motors.UseVisualStyleBackColor = true;
+            this.Btn_right_motors.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_right_motors.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
             // Btn_abajo_motores
             // 
@@ -122,125 +122,125 @@ namespace AppControlRobot
             this.Btn_arriba_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
             this.Btn_arriba_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // Btn_izquierda_servos
+            // Btn_left_servos
             // 
-            this.Btn_izquierda_servos.Location = new System.Drawing.Point(946, 256);
-            this.Btn_izquierda_servos.Name = "Btn_izquierda_servos";
-            this.Btn_izquierda_servos.Size = new System.Drawing.Size(75, 75);
-            this.Btn_izquierda_servos.TabIndex = 15;
-            this.Btn_izquierda_servos.Tag = "11";
-            this.Btn_izquierda_servos.Text = "Izquierda";
-            this.Btn_izquierda_servos.UseVisualStyleBackColor = true;
-            this.Btn_izquierda_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Btn_izquierda_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Btn_left_servos.Location = new System.Drawing.Point(946, 256);
+            this.Btn_left_servos.Name = "Btn_left_servos";
+            this.Btn_left_servos.Size = new System.Drawing.Size(75, 75);
+            this.Btn_left_servos.TabIndex = 15;
+            this.Btn_left_servos.Tag = "11";
+            this.Btn_left_servos.Text = "Izquierda";
+            this.Btn_left_servos.UseVisualStyleBackColor = true;
+            this.Btn_left_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_left_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // Btn_derecha_servos
+            // Btn_right_servos
             // 
-            this.Btn_derecha_servos.Location = new System.Drawing.Point(1099, 256);
-            this.Btn_derecha_servos.Name = "Btn_derecha_servos";
-            this.Btn_derecha_servos.Size = new System.Drawing.Size(75, 75);
-            this.Btn_derecha_servos.TabIndex = 16;
-            this.Btn_derecha_servos.Tag = "12";
-            this.Btn_derecha_servos.Text = "Derecha";
-            this.Btn_derecha_servos.UseVisualStyleBackColor = true;
-            this.Btn_derecha_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Btn_derecha_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Btn_right_servos.Location = new System.Drawing.Point(1099, 256);
+            this.Btn_right_servos.Name = "Btn_right_servos";
+            this.Btn_right_servos.Size = new System.Drawing.Size(75, 75);
+            this.Btn_right_servos.TabIndex = 16;
+            this.Btn_right_servos.Tag = "12";
+            this.Btn_right_servos.Text = "Derecha";
+            this.Btn_right_servos.UseVisualStyleBackColor = true;
+            this.Btn_right_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_right_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // Btn_abajo_servos
+            // Btn_down_servos
             // 
-            this.Btn_abajo_servos.Location = new System.Drawing.Point(1022, 337);
-            this.Btn_abajo_servos.Name = "Btn_abajo_servos";
-            this.Btn_abajo_servos.Size = new System.Drawing.Size(75, 75);
-            this.Btn_abajo_servos.TabIndex = 17;
-            this.Btn_abajo_servos.Tag = "13";
-            this.Btn_abajo_servos.Text = "Abajo";
-            this.Btn_abajo_servos.UseVisualStyleBackColor = true;
-            this.Btn_abajo_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Btn_abajo_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Btn_down_servos.Location = new System.Drawing.Point(1022, 337);
+            this.Btn_down_servos.Name = "Btn_down_servos";
+            this.Btn_down_servos.Size = new System.Drawing.Size(75, 75);
+            this.Btn_down_servos.TabIndex = 17;
+            this.Btn_down_servos.Tag = "13";
+            this.Btn_down_servos.Text = "Abajo";
+            this.Btn_down_servos.UseVisualStyleBackColor = true;
+            this.Btn_down_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_down_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // DiagonalSI
+            // DiagonalUL
             // 
-            this.DiagonalSI.Location = new System.Drawing.Point(25, 175);
-            this.DiagonalSI.Name = "DiagonalSI";
-            this.DiagonalSI.Size = new System.Drawing.Size(75, 75);
-            this.DiagonalSI.TabIndex = 18;
-            this.DiagonalSI.Tag = "4";
-            this.DiagonalSI.Text = "DiagonalSI";
-            this.DiagonalSI.UseVisualStyleBackColor = true;
-            this.DiagonalSI.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.DiagonalSI.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.DiagonalUL.Location = new System.Drawing.Point(25, 175);
+            this.DiagonalUL.Name = "DiagonalUL";
+            this.DiagonalUL.Size = new System.Drawing.Size(75, 75);
+            this.DiagonalUL.TabIndex = 18;
+            this.DiagonalUL.Tag = "4";
+            this.DiagonalUL.Text = "DiagonalUL";
+            this.DiagonalUL.UseVisualStyleBackColor = true;
+            this.DiagonalUL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.DiagonalUL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // DiagonalSD
+            // DiagonalUR
             // 
-            this.DiagonalSD.Location = new System.Drawing.Point(187, 175);
-            this.DiagonalSD.Name = "DiagonalSD";
-            this.DiagonalSD.Size = new System.Drawing.Size(75, 75);
-            this.DiagonalSD.TabIndex = 19;
-            this.DiagonalSD.Tag = "5";
-            this.DiagonalSD.Text = "DiagonalSD";
-            this.DiagonalSD.UseVisualStyleBackColor = true;
-            this.DiagonalSD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.DiagonalSD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.DiagonalUR.Location = new System.Drawing.Point(187, 175);
+            this.DiagonalUR.Name = "DiagonalUR";
+            this.DiagonalUR.Size = new System.Drawing.Size(75, 75);
+            this.DiagonalUR.TabIndex = 19;
+            this.DiagonalUR.Tag = "5";
+            this.DiagonalUR.Text = "DiagonalUR";
+            this.DiagonalUR.UseVisualStyleBackColor = true;
+            this.DiagonalUR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.DiagonalUR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // DiagonalII
+            // DiagonalBL
             // 
-            this.DiagonalII.Location = new System.Drawing.Point(25, 337);
-            this.DiagonalII.Name = "DiagonalII";
-            this.DiagonalII.Size = new System.Drawing.Size(75, 75);
-            this.DiagonalII.TabIndex = 20;
-            this.DiagonalII.Tag = "6";
-            this.DiagonalII.Text = "DiagonalII";
-            this.DiagonalII.UseVisualStyleBackColor = true;
-            this.DiagonalII.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.DiagonalII.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.DiagonalBL.Location = new System.Drawing.Point(25, 337);
+            this.DiagonalBL.Name = "DiagonalBL";
+            this.DiagonalBL.Size = new System.Drawing.Size(75, 75);
+            this.DiagonalBL.TabIndex = 20;
+            this.DiagonalBL.Tag = "6";
+            this.DiagonalBL.Text = "DiagonalBL";
+            this.DiagonalBL.UseVisualStyleBackColor = true;
+            this.DiagonalBL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.DiagonalBL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // DiagonalID
+            // DiagonalBR
             // 
-            this.DiagonalID.Location = new System.Drawing.Point(187, 337);
-            this.DiagonalID.Name = "DiagonalID";
-            this.DiagonalID.Size = new System.Drawing.Size(75, 75);
-            this.DiagonalID.TabIndex = 21;
-            this.DiagonalID.Tag = "7";
-            this.DiagonalID.Text = "DiagonalID";
-            this.DiagonalID.UseVisualStyleBackColor = true;
-            this.DiagonalID.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.DiagonalID.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.DiagonalBR.Location = new System.Drawing.Point(187, 337);
+            this.DiagonalBR.Name = "DiagonalBR";
+            this.DiagonalBR.Size = new System.Drawing.Size(75, 75);
+            this.DiagonalBR.TabIndex = 21;
+            this.DiagonalBR.Tag = "7";
+            this.DiagonalBR.Text = "DiagonalBR";
+            this.DiagonalBR.UseVisualStyleBackColor = true;
+            this.DiagonalBR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.DiagonalBR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // button5
+            // RotationL
             // 
-            this.button5.Location = new System.Drawing.Point(25, 122);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 22;
-            this.button5.Tag = "8";
-            this.button5.Text = "RotacionI";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.button5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.RotationL.Location = new System.Drawing.Point(25, 122);
+            this.RotationL.Name = "RotationL";
+            this.RotationL.Size = new System.Drawing.Size(75, 40);
+            this.RotationL.TabIndex = 22;
+            this.RotationL.Tag = "8";
+            this.RotationL.Text = "RotacionI";
+            this.RotationL.UseVisualStyleBackColor = true;
+            this.RotationL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.RotationL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // RotacionD
+            // RotationR
             // 
-            this.RotacionD.Location = new System.Drawing.Point(187, 122);
-            this.RotacionD.Name = "RotacionD";
-            this.RotacionD.Size = new System.Drawing.Size(75, 40);
-            this.RotacionD.TabIndex = 23;
-            this.RotacionD.Tag = "9";
-            this.RotacionD.Text = "RotacionD";
-            this.RotacionD.UseVisualStyleBackColor = true;
-            this.RotacionD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.RotacionD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.RotationR.Location = new System.Drawing.Point(187, 122);
+            this.RotationR.Name = "RotationR";
+            this.RotationR.Size = new System.Drawing.Size(75, 40);
+            this.RotationR.TabIndex = 23;
+            this.RotationR.Tag = "9";
+            this.RotationR.Text = "RotationR";
+            this.RotationR.UseVisualStyleBackColor = true;
+            this.RotationR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.RotationR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
-            // Restablecer
+            // Reset_servos
             // 
-            this.Restablecer.Location = new System.Drawing.Point(1022, 256);
-            this.Restablecer.Name = "Restablecer";
-            this.Restablecer.Size = new System.Drawing.Size(75, 75);
-            this.Restablecer.TabIndex = 24;
-            this.Restablecer.Tag = "14";
-            this.Restablecer.Text = "Restablecer";
-            this.Restablecer.UseVisualStyleBackColor = true;
-            this.Restablecer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
-            this.Restablecer.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
+            this.Reset_servos.Location = new System.Drawing.Point(1022, 256);
+            this.Reset_servos.Name = "Reset_servos";
+            this.Reset_servos.Size = new System.Drawing.Size(75, 75);
+            this.Reset_servos.TabIndex = 24;
+            this.Reset_servos.Tag = "14";
+            this.Reset_servos.Text = "Reset_servos";
+            this.Reset_servos.UseVisualStyleBackColor = true;
+            this.Reset_servos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Reset_servos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
             // camara
             // 
@@ -318,7 +318,7 @@ namespace AppControlRobot
             this.label_battery.TabIndex = 32;
             this.label_battery.Text = "Batería: ";
             // 
-            // Form1
+            // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,27 +331,27 @@ namespace AppControlRobot
             this.Controls.Add(this.btn_red);
             this.Controls.Add(this.btn_raw);
             this.Controls.Add(this.camara);
-            this.Controls.Add(this.Restablecer);
-            this.Controls.Add(this.RotacionD);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.DiagonalID);
-            this.Controls.Add(this.DiagonalII);
-            this.Controls.Add(this.DiagonalSD);
-            this.Controls.Add(this.DiagonalSI);
-            this.Controls.Add(this.Btn_abajo_servos);
-            this.Controls.Add(this.Btn_derecha_servos);
-            this.Controls.Add(this.Btn_izquierda_servos);
+            this.Controls.Add(this.Reset_servos);
+            this.Controls.Add(this.RotationR);
+            this.Controls.Add(this.RotationL);
+            this.Controls.Add(this.DiagonalBR);
+            this.Controls.Add(this.DiagonalBL);
+            this.Controls.Add(this.DiagonalUR);
+            this.Controls.Add(this.DiagonalUL);
+            this.Controls.Add(this.Btn_down_servos);
+            this.Controls.Add(this.Btn_right_servos);
+            this.Controls.Add(this.Btn_left_servos);
             this.Controls.Add(this.Btn_arriba_servos);
             this.Controls.Add(this.Btn_abajo_motores);
-            this.Controls.Add(this.Btn_derecha_motores);
-            this.Controls.Add(this.Btn_izquierda_motores);
-            this.Controls.Add(this.Btn_arriba_motores);
+            this.Controls.Add(this.Btn_right_motors);
+            this.Controls.Add(this.Btn_left_motors);
+            this.Controls.Add(this.Btn_up_motors);
             this.Controls.Add(this.label_titulo_servos);
             this.Controls.Add(this.label_titulo_motores);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainApp";
+            this.Text = "Control remoto";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
@@ -365,21 +365,21 @@ namespace AppControlRobot
         #endregion
         private System.Windows.Forms.Label label_titulo_motores;
         private System.Windows.Forms.Label label_titulo_servos;
-        private System.Windows.Forms.Button Btn_arriba_motores;
-        private System.Windows.Forms.Button Btn_izquierda_motores;
-        private System.Windows.Forms.Button Btn_derecha_motores;
+        private System.Windows.Forms.Button Btn_up_motors;
+        private System.Windows.Forms.Button Btn_left_motors;
+        private System.Windows.Forms.Button Btn_right_motors;
         private System.Windows.Forms.Button Btn_abajo_motores;
         private System.Windows.Forms.Button Btn_arriba_servos;
-        private System.Windows.Forms.Button Btn_izquierda_servos;
-        private System.Windows.Forms.Button Btn_derecha_servos;
-        private System.Windows.Forms.Button Btn_abajo_servos;
-        private System.Windows.Forms.Button DiagonalSI;
-        private System.Windows.Forms.Button DiagonalSD;
-        private System.Windows.Forms.Button DiagonalII;
-        private System.Windows.Forms.Button DiagonalID;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button RotacionD;
-        private System.Windows.Forms.Button Restablecer;
+        private System.Windows.Forms.Button Btn_left_servos;
+        private System.Windows.Forms.Button Btn_right_servos;
+        private System.Windows.Forms.Button Btn_down_servos;
+        private System.Windows.Forms.Button DiagonalUL;
+        private System.Windows.Forms.Button DiagonalUR;
+        private System.Windows.Forms.Button DiagonalBL;
+        private System.Windows.Forms.Button DiagonalBR;
+        private System.Windows.Forms.Button RotationL;
+        private System.Windows.Forms.Button RotationR;
+        private System.Windows.Forms.Button Reset_servos;
         private System.Windows.Forms.PictureBox camara;
         private System.Windows.Forms.Button btn_raw;
         private System.Windows.Forms.Button btn_red;

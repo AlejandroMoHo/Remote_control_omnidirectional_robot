@@ -17,13 +17,13 @@ using Newtonsoft.Json;
 
 namespace AppControlRobot
 {
-    public partial class Form1 : Form
+    public partial class MainApp : Form
     {
-        private string url_motores = "http://192.168.149.1:15001/";
+        private string url_motors = "http://192.168.149.1:15001/";
         private string url_servos = "http://192.168.149.1:15002/";
         private string url_sensors = "http://192.168.149.1:15002/get_sensors";
-        private string url_camara = "http://192.168.149.1:10300/video_feed";
-        private string url_camara_deteccion = "http://192.168.149.1:10300/";
+        private string url_camera = "http://192.168.149.1:10300/video_feed";
+        private string url_camera_detection = "http://192.168.149.1:10300/";
 
         private HttpClient httpClient = new HttpClient();
         private HttpClient get_sensors = new HttpClient();
@@ -35,7 +35,7 @@ namespace AppControlRobot
         private Timer controllerTimer;
         private Timer sensorsTimer;
 
-        private int botones_motor = 10;
+        private int buttons_motor = 10;
         private int index_camera_option = 0;
         private int min_value_battery = 6264;
         private int max_value_battery = 8330;
@@ -68,37 +68,37 @@ namespace AppControlRobot
         }
         */
 
-        private string[] instrucciones =
+        private string[] instructions =
         {
-            "arriba",
-            "izquierda",
-            "derecha",
-            "abajo",
-            "diagonalSI",
-            "diagonalSD",
-            "diagonalII",
-            "diagonalID",
-            "rotacionI",
-            "rotacionD",
-            //Poner las instrucciones de los motores arriba y los de servo abajo
-            //Recuerda actualizar el variable de botones_motor
-            "arriba",
-            "izquierda",
-            "derecha",
-            "abajo",
-            "restablecer"
+            "up",
+            "left",
+            "right",
+            "down",
+            "diagonalUL",
+            "diagonalUR",
+            "diagonalBL",
+            "diagonalBR",
+            "rotationL",
+            "rotationR",
+            //Poner las instructions de los motores arriba y los de servo abajo
+            //Recuerda actualizar el variable de buttons_motor
+            "up",
+            "left",
+            "right",
+            "down",
+            "resetServos"
         };
 
         private string[] camera_instructions =
         {
             "cameraRaw",
-            "detectRojo",
-            "detectVerde",
-            "detectAzul"
+            "detectRed",
+            "detectGreen",
+            "detectBlue"
 
         };
 
-        public Form1()
+        public MainApp()
         {
             InitializeComponent();
 
@@ -115,7 +115,7 @@ namespace AppControlRobot
             sensorsTimer.Tick += SensorsTimer_Tick;
             sensorsTimer.Start();
 
-            streamCamera = new MJPEGStream(url_camara);
+            streamCamera = new MJPEGStream(url_camera);
             streamCamera.NewFrame += GetNewFrame; 
             streamCamera.Start();
 
@@ -167,11 +167,11 @@ namespace AppControlRobot
             if (button != null)
             {
                 int buttonIndex = int.Parse(button.Tag.ToString());
-                if (buttonIndex >= 0 && buttonIndex < instrucciones.Length)
+                if (buttonIndex >= 0 && buttonIndex < instructions.Length)
                 {
-                    string url = (buttonIndex < botones_motor) ? 
-                        url_motores + instrucciones[buttonIndex] : 
-                        url_servos + instrucciones[buttonIndex];
+                    string url = (buttonIndex < buttons_motor) ? 
+                        url_motors + instructions[buttonIndex] : 
+                        url_servos + instructions[buttonIndex];
 
                     try
                     {
@@ -197,67 +197,67 @@ namespace AppControlRobot
                     switch (state.Value)
                     {
                         case 0: 
-                            await httpClient.GetAsync(url_motores + "arriba");
+                            await httpClient.GetAsync(url_motors + "up");
                             break;
                         case 4500:
-                            await httpClient.GetAsync(url_motores + "diagonalSD");
+                            await httpClient.GetAsync(url_motors + "diagonalUR");
                             break;
                         case 9000:
-                            await httpClient.GetAsync(url_motores + "derecha");
+                            await httpClient.GetAsync(url_motors + "right");
                             break;
                         case 13500:
-                            await httpClient.GetAsync(url_motores + "diagonalID");
+                            await httpClient.GetAsync(url_motors + "diagonalBL");
                             break;
                         case 18000:
-                            await httpClient.GetAsync(url_motores + "abajo");
+                            await httpClient.GetAsync(url_motors + "down");
                             break;
                         case 22500:
-                            await httpClient.GetAsync(url_motores + "diagonalII");
+                            await httpClient.GetAsync(url_motors + "diagonalBL");
                             break;
                         case 27000:
-                            await httpClient.GetAsync(url_motores + "izquierda");
+                            await httpClient.GetAsync(url_motors + "left");
                             break;
                         case 31500:
-                            await httpClient.GetAsync(url_motores + "diagonalSI");
+                            await httpClient.GetAsync(url_motors + "diagonalUL");
                             break;
-                        default: await httpClient.GetAsync(url_motores + "parar");
+                        default: await httpClient.GetAsync(url_motors + "stopMotors");
                             break;
 
                     }
                 }
 
                 if (state.Offset.ToString().Contains("Buttons6") && state.Value == 128)
-                    await httpClient.GetAsync(url_motores + "rotacionI");
+                    await httpClient.GetAsync(url_motors + "rotationL");
                 if (state.Offset.ToString().Contains("Buttons7") && state.Value == 128)
-                    await httpClient.GetAsync(url_motores + "rotacionD");
+                    await httpClient.GetAsync(url_motors + "rotationR");
                 if ((state.Offset.ToString().Contains("Buttons6") || state.Offset.ToString().Contains("Buttons7")) && state.Value == 0)
-                    await httpClient.GetAsync(url_motores + "parar");
+                    await httpClient.GetAsync(url_motors + "stopMotors");
 
                 if (state.Offset.ToString().Contains("Buttons0") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "izquierda");
+                    await httpClient.GetAsync(url_servos + "left");
                 else if (state.Offset.ToString().Contains("Buttons1") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "abajo");
+                    await httpClient.GetAsync(url_servos + "down");
                 else if (state.Offset.ToString().Contains("Buttons2") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "derecha");
+                    await httpClient.GetAsync(url_servos + "right");
                 else if (state.Offset.ToString().Contains("Buttons3") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "arriba");
+                    await httpClient.GetAsync(url_servos + "up");
                 if (state.Offset.ToString().Contains("Buttons9") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "restablecer");
+                    await httpClient.GetAsync(url_servos + "resetServos");
 
                 if (state.Offset.ToString().Contains("Buttons4") && state.Value == 128)
                 {
                     index_camera_option -= 1;
                     if (index_camera_option < 0) index_camera_option = 3;
-                    actualizar_color_detect();
-                    await httpClient.GetAsync(url_camara_deteccion + camera_instructions[index_camera_option]);
+                    update_color_detect();
+                    await httpClient.GetAsync(url_camera_detection + camera_instructions[index_camera_option]);
 
                 }
                 if (state.Offset.ToString().Contains("Buttons5") && state.Value == 128)
                 {
                     index_camera_option += 1;
                     if (index_camera_option > 3) index_camera_option = 0;
-                    actualizar_color_detect();
-                    await httpClient.GetAsync(url_camara_deteccion + camera_instructions[index_camera_option]);
+                    update_color_detect();
+                    await httpClient.GetAsync(url_camera_detection + camera_instructions[index_camera_option]);
                 }
 
             }
@@ -304,11 +304,11 @@ namespace AppControlRobot
             if (button != null)
             {
                 int buttonIndex = int.Parse(button.Tag.ToString());
-                if (buttonIndex >= 0 && buttonIndex < botones_motor)
+                if (buttonIndex >= 0 && buttonIndex < buttons_motor)
                 {
                     try
                     {
-                        httpClient.GetAsync(url_motores + "parar").Wait();
+                        httpClient.GetAsync(url_motors + "stopMotors").Wait();
                     }
                     catch (HttpRequestException ex)
                     {
@@ -327,33 +327,33 @@ namespace AppControlRobot
 
         private void btn_raw_Click(object sender, EventArgs e)
         {
-            httpClient.GetAsync(url_camara_deteccion + camera_instructions[0]).Wait();
+            httpClient.GetAsync(url_camera_detection + camera_instructions[0]).Wait();
             index_camera_option = 0;
-            actualizar_color_detect();
+            update_color_detect();
         }
 
         private void btn_red_Click(object sender, EventArgs e)
         {
-            httpClient.GetAsync(url_camara_deteccion + camera_instructions[1]).Wait();
+            httpClient.GetAsync(url_camera_detection + camera_instructions[1]).Wait();
             index_camera_option = 1;
-            actualizar_color_detect();
+            update_color_detect();
         }
 
         private void btn_green_Click(object sender, EventArgs e)
         {
-            httpClient.GetAsync(url_camara_deteccion + camera_instructions[2]).Wait();
+            httpClient.GetAsync(url_camera_detection + camera_instructions[2]).Wait();
             index_camera_option = 2;
-            actualizar_color_detect();
+            update_color_detect();
         }
 
         private void btn_blue_Click(object sender, EventArgs e)
         {
-            httpClient.GetAsync(url_camara_deteccion + camera_instructions[3]).Wait();
+            httpClient.GetAsync(url_camera_detection + camera_instructions[3]).Wait();
             index_camera_option = 3;
-            actualizar_color_detect();
+            update_color_detect();
         }
 
-        private void actualizar_color_detect()
+        private void update_color_detect()
         {
             switch (index_camera_option)
             {
