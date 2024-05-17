@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
 //NuGet
-using SharpDX.DirectInput;
+//using SharpDX.DirectInput;
+using SharpDX.XInput;
 using AForge.Video;
 using Newtonsoft.Json;
 
@@ -28,8 +29,7 @@ namespace AppControlRobot
         private HttpClient httpClient = new HttpClient();
         private HttpClient get_sensors = new HttpClient();
 
-        private DirectInput directInput;
-        private Joystick joystick;
+        private Controller controller;
 
         private Timer buttonsTimer;
         private Timer controllerTimer;
@@ -87,7 +87,7 @@ namespace AppControlRobot
             "right",
             "down",
             "resetServos",
-            "buzzer",
+            "buzzer_on",
             "pick_leave",
             "incline"
         };
@@ -110,7 +110,7 @@ namespace AppControlRobot
             buttonsTimer.Tick += ButtonsTimer_Tick;
 
             controllerTimer = new Timer();
-            controllerTimer.Interval = 100;
+            controllerTimer.Interval = 150;
             controllerTimer.Tick += ControllerTimer_Tick;
 
             sensorsTimer = new Timer();
@@ -126,29 +126,17 @@ namespace AppControlRobot
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            directInput = new DirectInput();
+            controller = new Controller(UserIndex.One);
 
-            var joystickGuid = Guid.Empty;
-
-            foreach (var deviceInstance in directInput.GetDevices(DeviceType.Gamepad, DeviceEnumerationFlags.AllDevices))
-                joystickGuid = deviceInstance.InstanceGuid;
-
-            if (joystickGuid == Guid.Empty)
-                foreach (var deviceInstance in directInput.GetDevices(DeviceType.Joystick, DeviceEnumerationFlags.AllDevices))
-                    joystickGuid = deviceInstance.InstanceGuid;
-
-            if(joystickGuid != Guid.Empty)
+            if (controller.IsConnected)
             {
-                joystick = new Joystick(directInput, joystickGuid);
-                joystick.Properties.BufferSize = 128;
-                joystick.Acquire();
                 controllerTimer.Start();
             }
             else
             {
                 MessageBox.Show("No hay control conectado =(");
                 Close();
-                return;
+                return; 
 
             }
         }
@@ -158,9 +146,6 @@ namespace AppControlRobot
         {
             controllerTimer.Stop();
             sensorsTimer.Stop();
-            joystick?.Unacquire();
-            joystick?.Dispose();
-            directInput?.Dispose();
 
         }
 
@@ -191,79 +176,81 @@ namespace AppControlRobot
 
         private async void ControllerTimer_Tick(object sender, EventArgs e)
         {
-            joystick.Poll();
-            var data = joystick.GetBufferedData();
-            foreach (var state in data)
+            var state = controller.GetState();
+            var buttons = state.Gamepad.Buttons;
+            var LX = state.Gamepad.LeftThumbX;
+            var LY = state.Gamepad.LeftThumbY;
+            var RX = state.Gamepad.RightThumbX;
+            var RY = state.Gamepad.RightThumbY;
+            var leftTrigger = state.Gamepad.LeftTrigger;
+            var rightTrigger = state.Gamepad.RightTrigger;
+
+            if (buttons != GamepadButtonFlags.None)
             {
-                if (state.Offset.ToString().Contains("PointOfViewControllers0"))
+                switch (buttons)
                 {
-                    switch (state.Value)
-                    {
-                        case 0: 
-                            await httpClient.GetAsync(url_motors + "up");
-                            break;
-                        case 4500:
-                            await httpClient.GetAsync(url_motors + "diagonalUR");
-                            break;
-                        case 9000:
-                            await httpClient.GetAsync(url_motors + "right");
-                            break;
-                        case 13500:
-                            await httpClient.GetAsync(url_motors + "diagonalBR");
-                            break;
-                        case 18000:
-                            await httpClient.GetAsync(url_motors + "down");
-                            break;
-                        case 22500:
-                            await httpClient.GetAsync(url_motors + "diagonalBL");
-                            break;
-                        case 27000:
-                            await httpClient.GetAsync(url_motors + "left");
-                            break;
-                        case 31500:
-                            await httpClient.GetAsync(url_motors + "diagonalUL");
-                            break;
-                        default: await httpClient.GetAsync(url_motors + "stopMotors");
-                            break;
-
-                    }
-                }
-
-                if (state.Offset.ToString().Contains("Buttons6") && state.Value == 128)
-                    await httpClient.GetAsync(url_motors + "rotationL");
-                if (state.Offset.ToString().Contains("Buttons7") && state.Value == 128)
-                    await httpClient.GetAsync(url_motors + "rotationR");
-                if ((state.Offset.ToString().Contains("Buttons6") || state.Offset.ToString().Contains("Buttons7")) && state.Value == 0)
-                    await httpClient.GetAsync(url_motors + "stopMotors");
-
-                if (state.Offset.ToString().Contains("Buttons0") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "left");
-                else if (state.Offset.ToString().Contains("Buttons1") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "down");
-                else if (state.Offset.ToString().Contains("Buttons2") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "right");
-                else if (state.Offset.ToString().Contains("Buttons3") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "up");
-                if (state.Offset.ToString().Contains("Buttons9") && state.Value == 128)
-                    await httpClient.GetAsync(url_servos + "resetServos");
-
-                if (state.Offset.ToString().Contains("Buttons4") && state.Value == 128)
-                {
-                    index_camera_option -= 1;
-                    if (index_camera_option < 0) index_camera_option = 3;
-                    update_color_detect();
-                    await httpClient.GetAsync(url_camera_detection + camera_instructions[index_camera_option]);
+                    case GamepadButtonFlags.A:
+                        await httpClient.GetAsync(url_servos + "pick_leave");
+                        break;
+                    case GamepadButtonFlags.B:
+                        break;
+                    case GamepadButtonFlags.X:
+                        break;
+                    case GamepadButtonFlags.Y:
+                        break;
+                    case GamepadButtonFlags.DPadUp:
+                        break;
+                    case GamepadButtonFlags.DPadDown:
+                        break;
+                    case GamepadButtonFlags.DPadLeft:
+                        break;
+                    case GamepadButtonFlags.DPadRight:
+                        break;
+                    case GamepadButtonFlags.RightShoulder:
+                        index_camera_option += 1;
+                        if (index_camera_option > 3) index_camera_option = 0;
+                        update_color_detect();
+                        await httpClient.GetAsync(url_camera_detection + camera_instructions[index_camera_option]);
+                        break;
+                    case GamepadButtonFlags.LeftShoulder:
+                        index_camera_option -= 1;
+                        if (index_camera_option < 0) index_camera_option = 3;
+                        update_color_detect();
+                        await httpClient.GetAsync(url_camera_detection + camera_instructions[index_camera_option]);
+                        break;
+                    case GamepadButtonFlags.Start:
+                        await httpClient.GetAsync(url_servos + "resetServos");
+                        break;
+                    case GamepadButtonFlags.RightThumb:
+                        await httpClient.GetAsync(url_servos + "buzzer_on");
+                        break;
+                    default:
+                        break;
 
                 }
-                if (state.Offset.ToString().Contains("Buttons5") && state.Value == 128)
-                {
-                    index_camera_option += 1;
-                    if (index_camera_option > 3) index_camera_option = 0;
-                    update_color_detect();
-                    await httpClient.GetAsync(url_camera_detection + camera_instructions[index_camera_option]);
-                }
-
             }
+            else
+            {
+                await httpClient.GetAsync(url_servos + "buzzer_off");
+            }
+
+
+            if (leftTrigger == 255) await httpClient.GetAsync(url_motors + "rotationL");
+            else if (rightTrigger == 255) await httpClient.GetAsync(url_motors + "rotationR");
+            else if (LY >= 32000) await httpClient.GetAsync(url_motors + "up");
+            else if (LY <= -32000) await httpClient.GetAsync(url_motors + "down");
+            else if (LX >= 32000) await httpClient.GetAsync(url_motors + "right");
+            else if (LX <= -32000) await httpClient.GetAsync(url_motors + "left");
+            else if (LX > 1000 && LY > 1000) await httpClient.GetAsync(url_motors + "diagonalUR");
+            else if (LX > 1000 && LY < -1000) await httpClient.GetAsync(url_motors + "diagonalBR");
+            else if (LX < -1000 && LY < -1000) await httpClient.GetAsync(url_motors + "diagonalBL");
+            else if (LX < -1000 && LY > 1000) await httpClient.GetAsync(url_motors + "diagonalUL");
+            else await httpClient.GetAsync(url_motors + "stopMotors");
+
+            if (RY >= 32767) await httpClient.GetAsync(url_servos + "up");
+            else if (RY <= -32767) await httpClient.GetAsync(url_servos + "down");
+            else if (RX >= 32767) await httpClient.GetAsync(url_servos + "right");
+            else if (RX <= -32767) await httpClient.GetAsync(url_servos + "left");
         }
 
         private async void SensorsTimer_Tick(object sender, EventArgs e)
@@ -316,6 +303,16 @@ namespace AppControlRobot
                     catch (HttpRequestException ex)
                     {
                         MessageBox.Show($"Error de conexión al detener el movimiento del robot: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                } else
+                {
+                    try
+                    {
+                        httpClient.GetAsync(url_servos + "buzzer_off").Wait();
+                    }
+                    catch (HttpRequestException ex)
+                    {
+                        MessageBox.Show($"Error de conexión al detener el buzzer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

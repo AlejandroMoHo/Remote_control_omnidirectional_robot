@@ -141,6 +141,8 @@ namespace AppControlRobot
             this.Btn_incline.TabIndex = 35;
             this.Btn_incline.Tag = "17";
             this.Btn_incline.UseVisualStyleBackColor = false;
+            this.Btn_incline.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_incline.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
             // Btn_pick_leave
             // 
@@ -155,6 +157,8 @@ namespace AppControlRobot
             this.Btn_pick_leave.TabIndex = 34;
             this.Btn_pick_leave.Tag = "16";
             this.Btn_pick_leave.UseVisualStyleBackColor = false;
+            this.Btn_pick_leave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_pick_leave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
             // Btn_buzzer
             // 
@@ -169,6 +173,8 @@ namespace AppControlRobot
             this.Btn_buzzer.TabIndex = 33;
             this.Btn_buzzer.Tag = "15";
             this.Btn_buzzer.UseVisualStyleBackColor = false;
+            this.Btn_buzzer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseDown);
+            this.Btn_buzzer.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseUp);
             // 
             // pictureBox_color_detect
             // 
