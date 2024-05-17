@@ -86,7 +86,10 @@ namespace AppControlRobot
             "left",
             "right",
             "down",
-            "resetServos"
+            "resetServos",
+            "buzzer",
+            "pick_leave",
+            "incline"
         };
 
         private string[] camera_instructions =
@@ -206,7 +209,7 @@ namespace AppControlRobot
                             await httpClient.GetAsync(url_motors + "right");
                             break;
                         case 13500:
-                            await httpClient.GetAsync(url_motors + "diagonalBL");
+                            await httpClient.GetAsync(url_motors + "diagonalBR");
                             break;
                         case 18000:
                             await httpClient.GetAsync(url_motors + "down");

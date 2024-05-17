@@ -45,10 +45,10 @@ C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobo
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.DirectInput.pdb
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.DirectInput.xml
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.AssemblyReference.cache
-C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.Form1.resources
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.Properties.Resources.resources
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.GenerateResource.cache
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.CoreCompileInputs.cache
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.csproj.CopyComplete
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.exe
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.MainApp.resources

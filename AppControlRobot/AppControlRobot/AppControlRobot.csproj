@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -94,6 +95,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottomleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottomright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upperleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upperright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinzas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buzzer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotationL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotationR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detgreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detnon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detred.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
