@@ -55,3 +55,7 @@ C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobo
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.XInput.dll
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.XInput.pdb
 C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\SharpDX.XInput.xml
+C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.exe.manifest
+C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\bin\Debug\AppControlRobot.application
+C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.exe.manifest
+C:\Users\anton\Desktop\Servicio Social (ITCH)\git\AppControlRobot\AppControlRobot\obj\Debug\AppControlRobot.application
