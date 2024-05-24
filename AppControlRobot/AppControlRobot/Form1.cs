@@ -23,8 +23,8 @@ namespace AppControlRobot
         private string url_motors = "http://192.168.149.1:15001/";
         private string url_servos = "http://192.168.149.1:15002/";
         private string url_sensors = "http://192.168.149.1:15002/get_sensors";
-        private string url_camera = "http://192.168.149.1:7070/video_feed";
-        private string url_camera_detection = "http://192.168.149.1:7070/";
+        private string url_camera = "http://192.168.149.1:8081/video_f1eed";
+        private string url_camera_detection = "http://192.168.149.1:8081/";
 
         private HttpClient httpClient = new HttpClient();
         private HttpClient get_sensors = new HttpClient();
@@ -134,6 +134,8 @@ namespace AppControlRobot
             }
             else
             {
+                buttonsTimer.Stop();
+                controllerTimer.Stop(); 
                 MessageBox.Show("No hay control conectado =(");
                 Close();
                 return; 
@@ -167,6 +169,9 @@ namespace AppControlRobot
                     }
                     catch (HttpRequestException ex)
                     {
+                        controllerTimer.Stop();
+                        buttonsTimer.Stop();
+                        controllerTimer.Stop();
                         buttonsTimer.Stop();
                         MessageBox.Show($"Error de conexión al servidor: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Close();
@@ -276,6 +281,9 @@ namespace AppControlRobot
             }
             catch (HttpRequestException error)
             {
+                controllerTimer.Stop();
+                buttonsTimer.Stop();
+                controllerTimer.Stop();
                 MessageBox.Show($"Error al realizar la solicitud HTTP: {error.Message}");
                 Close();
                 return;
@@ -306,6 +314,9 @@ namespace AppControlRobot
                     }
                     catch (HttpRequestException ex)
                     {
+                        controllerTimer.Stop();
+                        buttonsTimer.Stop();
+                        controllerTimer.Stop();
                         MessageBox.Show($"Error de conexión al detener el movimiento del robot: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Close();
                         return;
@@ -318,6 +329,9 @@ namespace AppControlRobot
                     }
                     catch (HttpRequestException ex)
                     {
+                        controllerTimer.Stop();
+                        buttonsTimer.Stop();
+                        controllerTimer.Stop();
                         MessageBox.Show($"Error de conexión al detener el buzzer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Close();
                         return;
