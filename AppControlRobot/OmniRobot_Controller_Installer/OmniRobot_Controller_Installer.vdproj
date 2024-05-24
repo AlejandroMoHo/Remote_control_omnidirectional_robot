@@ -501,7 +501,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:OmniRobot Controller"
         "ProductCode" = "8:{5F4B499A-EF0F-47FB-AC53-997305ADD358}"
-        "PackageCode" = "8:{E2FFBF35-A7E7-4EEC-BD85-C8C4188DE6EE}"
+        "PackageCode" = "8:{FF0B1A40-4C92-4386-A3CD-2708C22578AC}"
         "UpgradeCode" = "8:{6754D48C-E26B-4031-8E78-09C3E0CFFE01}"
         "AspNetVersion" = "8:1.1.4322.0"
         "RestartWWWService" = "11:FALSE"
@@ -1050,7 +1050,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9A69E8E8AAC44DC7A2F77D3385182CE2"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\AppControlRobot\\obj\\Release\\AppControlRobot.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E5C14EF2D14A484FABCE8316AAB715B9"
