@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="AppControlRobot.exe.manifest" size="7560">
+    <dependentAssembly dependencyType="install" codebase="AppControlRobot.exe.manifest" size="7632">
       <assemblyIdentity name="AppControlRobot.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pBwECL4Tq7toYmC+tN6OsnC3+kXzgJQZZEh1hcJWDy4=</dsig:DigestValue>
+        <dsig:DigestValue>7/V0ILANmfHSUtz0bSQRjyDJGveN3iyuj18Ktxx2CY0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
