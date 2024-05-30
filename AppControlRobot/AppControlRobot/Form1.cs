@@ -25,7 +25,11 @@ namespace AppControlRobot
         private string url_motors = "http://192.168.149.1:15001/";
         private string url_servos = "http://192.168.149.1:15002/";
         private string url_sensors = "http://192.168.149.1:15002/get_sensors";
+
+        private string url_camera = "http://192.168.149.1:8081/video_feed";
+
         private string url_camera = "http://192.168.149.1:8081/video_f1eed";
+
         private string url_camera_detection = "http://192.168.149.1:8081/";
 
         private HttpClient httpClient = new HttpClient();
