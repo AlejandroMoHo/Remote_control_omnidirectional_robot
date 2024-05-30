@@ -20,6 +20,8 @@ namespace AppControlRobot
 {
     public partial class MainApp : Form
     {
+        private bool buzzer_flag_active = false;
+
         private string url_motors = "http://192.168.149.1:15001/";
         private string url_servos = "http://192.168.149.1:15002/";
         private string url_sensors = "http://192.168.149.1:15002/get_sensors";
@@ -230,6 +232,7 @@ namespace AppControlRobot
                         break;
                     case GamepadButtonFlags.RightThumb:
                         await httpClient.GetAsync(url_servos + "buzzer_on");
+                        buzzer_flag_active = true;
                         break;
                     default:
                         break;
@@ -238,7 +241,11 @@ namespace AppControlRobot
             }
             else
             {
-                await httpClient.GetAsync(url_servos + "buzzer_off");
+                if (buzzer_flag_active)
+                {
+                    await httpClient.GetAsync(url_servos + "buzzer_off");
+                    buzzer_flag_active = false;
+                }
             }
 
 
