@@ -1,0 +1,16 @@
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\PS4controller.exe.config
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\PS4controller.exe
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\PS4controller.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.DirectInput.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.DirectInput.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.DirectInput.xml
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\obj\Debug\PS4controller.csproj.AssemblyReference.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\obj\Debug\PS4controller.csproj.CoreCompileInputs.cache
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\obj\Debug\PS4controller.csproj.CopyComplete
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\obj\Debug\PS4controller.exe
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\obj\Debug\PS4controller.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.XInput.dll
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.XInput.pdb
+C:\Users\anton\Desktop\Servicio Social (ITCH)\ControladorPS4_prueba\PS4controller\PS4controller\bin\Debug\SharpDX.XInput.xml
