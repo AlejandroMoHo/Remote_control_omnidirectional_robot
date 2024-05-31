@@ -1,3 +1,5 @@
+#Este programa falla al cerrar la tarea relacionada con los motores, cosa de las librerias de rospy, pendiente a solucionar
+
 import subprocess as subp
 import threading
 import signal
