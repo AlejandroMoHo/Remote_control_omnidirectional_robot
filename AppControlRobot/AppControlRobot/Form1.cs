@@ -28,8 +28,6 @@ namespace AppControlRobot
 
         private string url_camera = "http://192.168.149.1:8081/video_feed";
 
-        private string url_camera = "http://192.168.149.1:8081/video_f1eed";
-
         private string url_camera_detection = "http://192.168.149.1:8081/";
 
         private HttpClient httpClient = new HttpClient();
