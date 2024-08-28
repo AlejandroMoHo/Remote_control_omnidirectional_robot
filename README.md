@@ -28,7 +28,7 @@ Aquí se encuentran los códigos principales implementados en Ubuntu en la Raspb
 - **`vs_control_servo.py`**: Similar al anterior, pero maneja el control de los servomotores del brazo robótico.
 
 
-## Proceso de Instalación
+## Proceso de Instalación AppControlRobot
 
 Para instalar la aplicación, sigue estos pasos:
 
@@ -119,7 +119,8 @@ Una vez hayas accedido al robot puedes:
    ```sh
    python3 main_control_vs.py
    ```
-3. Una vez realizado esto, deberas abrir la aplicación de control del robot en Windows. `ADVERTENCIA:` Recuerda conectar el control y abrir DS4 antes de abrir la aplicación.
+   Se recomienda no cerrar la terminal de comandos en caso de que se quiera detener el programa. En caso de cerrarlo, se recomienda reiniciar el robot.
+3. Una vez realizado esto, deberas abrir la aplicación de control del robot en Windows. `ADVERTENCIA:` Recuerda conectar el control y abrir DS4Windows antes de abrir la aplicación. En caso de no contar con DS4Windows se puede descargar desde su [página oficial](https://ds4-windows.com/download/ryochan7-ds4windows/).
 
 ### Reiniciar el Robot
 
