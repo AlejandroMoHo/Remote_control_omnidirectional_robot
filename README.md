@@ -62,4 +62,77 @@ Enlace directo al instalador:
 
 ---
 
+# Instrucciones para Conectar, Utilizar y/o Reiniciar el Robot
+
+## Verificar Instalación de SSH
+
+1. Abre CMD o PowerShell en Windows.
+2. Escribe el siguiente comando y presiona Enter:
+   ```sh
+   ssh -V
+   ```
+3. Deberías ver una salida similar a:
+   `
+   OpenSSH_for_Windows_8.6p1, LibreSSL 3.4.3
+   `
+
+## Instalación de SSH
+
+- Si no tienes SSH instalado, puedes seguir las instrucciones en la página de Microsoft: 
+   [Instalación de OpenSSH](https://learn.microsoft.com/es-es/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)
+
+- Alternativamente, puedes instalar [PuTTY]( https://www.putty.org/).
+
+## Conexión con SSH
+
+1. Conéctate a la red `HW-E82EC0F1`.
+2. Abre PowerShell o CMD en Windows.
+3. Escribe el siguiente comando y presiona Enter:
+   ```sh
+   ssh ubuntu@192.168.149.1
+   ```
+4. Introduce la contraseña `hiwonder` y presiona Enter.
+   - `Nota`:  La contraseña no será visible mientras la introduces.
+
+## Conexión con PuTTY
+
+1. Conéctate a la red `HW-E82EC0F1`.
+2. Abre el programa PuTTY.
+3. En **Host Name (or IP address)** escribe `192.168.149.1`.
+4. El **Port** debe ser `22`.
+5. El **Connection type** debe ser `SSH`.
+6. Haz clic en **Open**.
+
+   - `Nota`: Si es la primera vez que te conectas, probablemente aparezca una advertencia. Solo escribe `yes` o `y`, o dale clic en **OK** (dependiendo del método de conexión).
+
+## Acceso al Robot
+
+Una vez hayas accedido al robot puedes:
+
+### Iniciar los módulos del Robot
+
+1. Escribe en la terminal del robot:
+   ```sh
+   cd Desktop/chassis_control_demo/
+   ```
+2. Luego, ejecuta:
+   ```sh
+   python3 main_control_vs.py
+   ```
+3. Una vez realizado esto, deberas abrir la aplicación de control del robot en Windows. `ADVERTENCIA:` Recuerda conectar el control y abrir DS4 antes de abrir la aplicación.
+
+### Reiniciar el Robot
+
+En caso de presentar algún problema o anomalía se recomienda realizar lo siguiente:
+
+1. Escribe en la terminal del robot:
+   ```sh
+   sudo reboot
+   ```
+2. Introduce la contraseña `hiwonder` y presiona Enter.
+   - `Nota`: La contraseña no será visible mientras la introduces.
+4. Espera a que el robot arranque de nuevo. Puedes identificar que ha arrancado porque la red se activará nuevamente.
+
+---
+
 Si tienes alguna pregunta o necesitas más información, no dudes en contactar al mantenedor del proyecto.
